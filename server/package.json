@@ -1,0 +1,23 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Backend to fetch the attendence and perform the required operations",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yeshwanth and rushindhra",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.13.2",
+    "axios-cookiejar-support": "^6.0.5",
+    "cheerio": "^1.1.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "fs": "^0.0.1-security",
+    "mongoose": "^8.20.2",
+    "puppeteer": "^24.31.0",
+    "tough-cookie": "^6.0.0"
+  },
+  "type": "module"
+}

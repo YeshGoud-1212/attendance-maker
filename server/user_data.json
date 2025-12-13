@@ -1,0 +1,18 @@
+{
+  "23071A1234": {
+    "semesterEnd": "2025-12-25",
+    "timetable": {
+      "Mon": 4,
+      "Tue": 5,
+      "Wed": 4,
+      "Thu": 4,
+      "Fri": 3,
+      "Sat": 4,
+      "Sun": 0
+    },
+    "holidays": [],
+    "targetPercent": 75,
+    "simulate": 2,
+    "lastUpdated": "2025-12-11T17:39:07.354Z"
+  }
+}

@@ -1,0 +1,22 @@
+###POST
+POST http://localhost:3000/fetch-attendance
+Content-Type: application/json
+
+{
+  "username": "23071A1234",
+  "password": "VNRrushi@123",
+  "semesterEnd": "2025-12-26",
+  "timetable": {
+    "Mon": 4,
+    "Tue": 5,
+    "Wed": 4,
+    "Thu": 4,
+    "Fri": 3,
+    "Sat": 4,
+    "Sun": 0
+  },
+  "holidays": ["2025-11-29"],
+  "targetPercent": 75,
+  "simulate": 2
+}
+
