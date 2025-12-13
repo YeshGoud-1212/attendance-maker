@@ -1,5 +1,5 @@
 // attendance.js
-import puppeteer from "puppeteer";
+import puppeteer from "puppeteer-core";
 import axios from "axios";
 import * as cheerio from "cheerio";
 
