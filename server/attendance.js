@@ -7,7 +7,7 @@ export async function getAttendance(username, password) {
     console.log("🚀 Launching browser...");
 
 const browser = await puppeteer.launch({
-  executablePath: "/usr/bin/chromium",
+  executablePath: "/usr/bin/google-chrome-stable",
   headless: true,
   args: [
     "--no-sandbox",
