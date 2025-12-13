@@ -642,26 +642,26 @@ export default function App() {
           </div>
           
           <div className="flex items-center gap-4">
-            <a 
+            {/* <a 
               href="https://instagram.com/yourhandle" 
               target="_blank" 
               rel="noopener noreferrer"
               className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center hover:bg-pink-500/20 hover:border-pink-500/50 transition-all duration-300 hover:scale-110"
             >
               <Instagram className="w-5 h-5 text-pink-400" />
-            </a>
+            </a> */}
             
-            <a 
+            {/* <a 
               href="https://github.com/yourhandle" 
               target="_blank" 
               rel="noopener noreferrer"
               className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center hover:bg-gray-500/20 hover:border-gray-500/50 transition-all duration-300 hover:scale-110"
             >
               <Github className="w-5 h-5 text-gray-400" />
-            </a>
+            </a> */}
             
             <a 
-              href="https://linkedin.com/in/yourhandle" 
+              href="https://www.linkedin.com/in/rushindhra-marri/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center hover:bg-blue-500/20 hover:border-blue-500/50 transition-all duration-300 hover:scale-110"
