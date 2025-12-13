@@ -20,5 +20,8 @@
     "puppeteer": "^24.33.0",
     "tough-cookie": "^6.0.0"
   },
+  "engines": {
+  "node": ">=20.18.1"
+},
   "type": "module"
 }
