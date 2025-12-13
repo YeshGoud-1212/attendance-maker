@@ -6,10 +6,14 @@ import * as cheerio from "cheerio";
 export async function getAttendance(username, password) {
     console.log("🚀 Launching browser...");
 
-    const browser = await puppeteer.launch({
-        headless: false,
-        args: ["--no-sandbox", "--disable-setuid-sandbox"]
-    });
+const browser = await puppeteer.launch({
+  executablePath: "/usr/bin/chromium",
+  headless: true,
+  args: [
+    "--no-sandbox",
+    "--disable-setuid-sandbox"
+  ]
+});
 
     const page = await browser.newPage();
     await page.goto("https://automation.vnrvjiet.ac.in/eduprime3", { waitUntil: "networkidle2" });
