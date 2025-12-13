@@ -1,6 +1,8 @@
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config();
 
 import { getAttendance } from "./attendance.js";
 import {
@@ -12,7 +14,7 @@ import {
 const app = express();
 
 // -------- MongoDB Connection --------
-mongoose.connect("mongodb://localhost:27017/attendance-tracker")
+mongoose.connect(process.env.DB_URL)
 .then(() => console.log("✅ MongoDB Connected"))
 .catch(err => console.error("❌ MongoDB Connection Error:", err));
 
@@ -39,7 +41,7 @@ const UserConfig = mongoose.model("UserConfig", userConfigSchema);
 
 // -------- CORS --------
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: process.env.Host_URL,
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"],
 }));
