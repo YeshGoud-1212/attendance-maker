@@ -37,7 +37,7 @@ export default function App() {
     setLoading(true);
 
     try {
-      const response = await fetch("https://attendance-maker-nt1j.onrender.com/fetch-attendance", {
+      const response = await fetch("https://attendance-maker-1.onrender.com/fetch-attendance", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password })
@@ -63,7 +63,7 @@ export default function App() {
   async function handleOpenConfig() {
     setLoading(true);
     try {
-      const configResponse = await fetch(`https://attendance-maker-nt1j.onrender.com/get-config/${username}`);
+      const configResponse = await fetch(`https://attendance-maker-1.onrender.com/get-config/${username}`);
       if (configResponse.ok) {
         const savedConfig = await configResponse.json();
         if (savedConfig.config) {
@@ -93,7 +93,7 @@ export default function App() {
         .map(h => h.trim())
         .filter(h => h.length > 0);
 
-      const response = await fetch("https://attendance-maker-nt1j.onrender.com/save-config", {
+      const response = await fetch("https://attendance-maker-1.onrender.com/save-config", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
