@@ -18,7 +18,6 @@
     "fs": "^0.0.1-security",
     "mongoose": "^8.20.2",
     "puppeteer": "^24.31.0",
-    "puppeteer-core": "^24.33.0",
     "tough-cookie": "^6.0.0"
   },
   "type": "module"
