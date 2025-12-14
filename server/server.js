@@ -40,11 +40,24 @@ const userConfigSchema = new mongoose.Schema({
 const UserConfig = mongoose.model("UserConfig", userConfigSchema);
 
 // -------- CORS --------
+const allowedOrigins = (process.env.ALLOWED_ORIGINS || "")
+    .split(",")
+    .map(o => o.trim());
+
 app.use(cors({
-    origin: process.env.Host_URL,
-    methods: ["GET", "POST"],
+    origin: function (origin, callback) {
+        if (!origin) return callback(null, true); // Postman, curl
+
+        if (allowedOrigins.includes(origin)) {
+            return callback(null, true);
+        }
+
+        callback(new Error("Not allowed by CORS"));
+    },
+    methods: ["GET", "POST", "OPTIONS"],
     allowedHeaders: ["Content-Type"],
 }));
+
 
 app.use(express.json());
 
