@@ -8,12 +8,15 @@ export async function getAttendance(username, password) {
     console.log("🚀 Launching browser...");
 
     const browser = await puppeteer.launch({
-        executablePath: process.env.NODE_ENV === "production"
-            ? "/usr/bin/google-chrome-stable"
-            : puppeteer.executablePath(),
-        headless: true,
-        args: ["--no-sandbox", "--disable-setuid-sandbox" ]
-    });
+    executablePath: "/usr/bin/google-chrome-stable",
+    headless: true,
+    args: [
+        "--no-sandbox",
+        "--disable-setuid-sandbox",
+        "--disable-dev-shm-usage"
+    ]
+});
+
 
     const page = await browser.newPage();
     await page.goto("https://automation.vnrvjiet.ac.in/eduprime3", { waitUntil: "networkidle2" });
