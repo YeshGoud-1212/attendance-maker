@@ -11,7 +11,7 @@ export async function getAttendance(username, password) {
         executablePath: process.env.NODE_ENV === "production"
             ? "/usr/bin/google-chrome-stable"
             : puppeteer.executablePath(),
-        headless: false,
+        headless: "new",
         args: ["--no-sandbox", "--disable-setuid-sandbox" ]
     });
 
