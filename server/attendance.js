@@ -7,8 +7,7 @@ import * as cheerio from "cheerio";
 export async function getAttendance(username, password) {
     console.log("🚀 Launching browser...");
 
-    const browser = await puppeteer.launch({
-    executablePath: "/usr/bin/google-chrome-stable",
+   const browser = await puppeteer.launch({
     headless: true,
     args: [
         "--no-sandbox",
