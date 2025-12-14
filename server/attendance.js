@@ -2,14 +2,18 @@
 import puppeteer from "puppeteer";
 import axios from "axios";
 import * as cheerio from "cheerio";
+// require("dotenv").config();
 
 export async function getAttendance(username, password) {
     console.log("🚀 Launching browser...");
 
-const browser = await puppeteer.launch({
-  headless: "new",
-  args: ["--no-sandbox", "--disable-setuid-sandbox"]
-});
+    const browser = await puppeteer.launch({
+        executablePath: process.env.NODE_ENV === "production"
+            ? "/usr/bin/google-chrome-stable"
+            : puppeteer.executablePath(),
+        headless: false,
+        args: ["--no-sandbox", "--disable-setuid-sandbox" ]
+    });
 
     const page = await browser.newPage();
     await page.goto("https://automation.vnrvjiet.ac.in/eduprime3", { waitUntil: "networkidle2" });
