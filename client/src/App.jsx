@@ -637,7 +637,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-center md:text-left">
             <p className="text-gray-400 text-sm">
-              Created by <span className="text-white font-bold">Rushi bhai</span>
+              Created by <span className="text-white font-bold">Yeshwanth & Rushi</span>
             </p>
           </div>
           
